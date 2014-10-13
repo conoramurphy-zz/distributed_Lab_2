@@ -56,6 +56,7 @@ print 'Socket now listening'
 for x in range(0, 10):
 	start_new_thread(clientthread, (quu,))
 while ALIVE:
+	print str(ALIVE)	
 	conn, addr = s.accept()
 	quu.put((conn,addr))
 s.close()
